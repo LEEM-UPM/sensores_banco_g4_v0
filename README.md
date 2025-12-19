@@ -1,0 +1,1 @@
+# sensores_banco_g4_v0
