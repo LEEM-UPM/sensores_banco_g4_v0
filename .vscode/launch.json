@@ -1,0 +1,19 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug STM32 (Cortex-Debug)",
+            "cwd": "${workspaceFolder}",
+            "executable": "${workspaceFolder}/build/Debug/sensores_banco_g4_v0.elf",
+            "request": "launch",
+            "type": "cortex-debug",
+            "runToEntryPoint": "main",
+            "servertype": "stlink",
+            "device": "STM32G473CE",
+            "interface": "swd",
+            "serialNumber": "",
+            "svdFile": "",
+            "preLaunchTask": "CMake: Build (Debug)"
+        }
+    ]
+}

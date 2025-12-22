@@ -1,0 +1,85 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: Configure (Debug)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset=Debug"
+            ],
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Configure CMake project with Debug preset"
+        },
+        {
+            "label": "CMake: Build (Debug)",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "build/Debug"
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Build the project using CMake",
+            "dependsOn": [
+                "CMake: Configure (Debug)"
+            ]
+        },
+        {
+            "label": "Flash to STM32 (ST-LINK)",
+            "type": "shell",
+            "command": "STM32_Programmer_CLI",
+            "args": [
+                "-c",
+                "port=SWD",
+                "mode=UR",
+                "reset=HWrst",
+                "-w",
+                "build/Debug/sensores_banco_g4_v0.elf",
+                "-rst"
+            ],
+            "problemMatcher": [],
+            "group": "test",
+            "detail": "Flash firmware to STM32G473CET6 via ST-LINK/SWDIO",
+            "dependsOn": [
+                "CMake: Build (Debug)"
+            ]
+        },
+        {
+            "label": "Build and Flash",
+            "dependsOn": [
+                "CMake: Build (Debug)",
+                "Flash to STM32 (ST-LINK)"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "group": {
+                "kind": "test",
+                "isDefault": true
+            },
+            "detail": "Build the project and flash to STM32 via ST-LINK"
+        },
+        {
+            "label": "Clean Build",
+            "type": "shell",
+            "command": "Remove-Item",
+            "args": [
+                "-Recurse",
+                "-Force",
+                "build/Debug"
+            ],
+            "problemMatcher": [],
+            "detail": "Clean the build directory"
+        }
+    ]
+}
