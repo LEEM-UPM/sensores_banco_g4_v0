@@ -121,6 +121,7 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
+  
 
   /* USER CODE END 2 */
 
@@ -129,6 +130,9 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+    HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin); // LED1_GPIO_Port == GPIOA, LED1_Pin == GPIO_PIN_10
+    HAL_Delay(500);
+  
 
     /* USER CODE BEGIN 3 */
   }
