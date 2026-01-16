@@ -1,0 +1,239 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CMake: Configure Debug",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset=Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Configure CMake project for Debug build"
+        },
+        {
+            "label": "CMake: Configure Release",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--preset=Release"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "detail": "Configure CMake project for Release build"
+        },
+        {
+            "label": "Build Debug",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/Debug"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn": [
+                "CMake: Configure Debug"
+            ],
+            "detail": "Build the project in Debug mode"
+        },
+        {
+            "label": "Build Release",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/Release"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": false
+            },
+            "dependsOn": [
+                "CMake: Configure Release"
+            ],
+            "detail": "Build the project in Release mode"
+        },
+        {
+            "label": "Clean Debug",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/Debug",
+                "--target",
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "detail": "Clean Debug build artifacts"
+        },
+        {
+            "label": "Clean Release",
+            "type": "shell",
+            "command": "cmake",
+            "args": [
+                "--build",
+                "${workspaceFolder}/build/Release",
+                "--target",
+                "clean"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "detail": "Clean Release build artifacts"
+        },
+        {
+            "label": "Flash Debug (ST-Link)",
+            "type": "shell",
+            "command": "STM32_Programmer_CLI.exe",
+            "args": [
+                "-c", "port=SWD", "mode=UR", "freq=4000", "reset=HWrst",
+                "-w", "${workspaceFolder}/build/Debug/sensores_banco_g4_v0.bin", "0x08000000",
+                "-rst"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Build Debug"
+            ],
+            "detail": "Flash Debug binary to STM32 via ST-Link (STM32CubeProgrammer)"
+        },
+        {
+            "label": "Flash Release (ST-Link)",
+            "type": "shell",
+            "command": "STM32_Programmer_CLI.exe",
+            "args": [
+                "-c", "port=SWD", "mode=UR", "freq=4000", "reset=HWrst",
+                "-w", "${workspaceFolder}/build/Release/sensores_banco_g4_v0.bin", "0x08000000",
+                "-rst"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Build Release"
+            ],
+            "detail": "Flash Release binary to STM32 via ST-Link (STM32CubeProgrammer)"
+        },
+        {
+            "label": "Generate BIN (Debug)",
+            "type": "shell",
+            "command": "arm-none-eabi-objcopy",
+            "args": [
+                "-O",
+                "binary",
+                "${workspaceFolder}/build/Debug/sensores_banco_g4_v0.elf",
+                "${workspaceFolder}/build/Debug/sensores_banco_g4_v0.bin"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Build Debug"
+            ],
+            "detail": "Convert Debug ELF to BIN format"
+        },
+        {
+            "label": "Generate BIN (Release)",
+            "type": "shell",
+            "command": "arm-none-eabi-objcopy",
+            "args": [
+                "-O",
+                "binary",
+                "${workspaceFolder}/build/Release/sensores_banco_g4_v0.elf",
+                "${workspaceFolder}/build/Release/sensores_banco_g4_v0.bin"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "dependsOn": [
+                "Build Release"
+            ],
+            "detail": "Convert Release ELF to BIN format"
+        },
+        {
+            "label": "Build and Flash Debug",
+            "dependsOn": [
+                "Generate BIN (Debug)",
+                "Flash Debug (ST-Link)"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "detail": "Full workflow: Build Debug and flash to STM32"
+        },
+        {
+            "label": "Build and Flash Release",
+            "dependsOn": [
+                "Generate BIN (Release)",
+                "Flash Release (ST-Link)"
+            ],
+            "dependsOrder": "sequence",
+            "problemMatcher": [],
+            "detail": "Full workflow: Build Release and flash to STM32"
+        },
+        {
+            "label": "Erase Flash (ST-Link)",
+            "type": "shell",
+            "command": "STM32_Programmer_CLI.exe",
+            "args": [
+                "-c", "port=SWD",
+                "-e", "all"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "detail": "Erase entire STM32 flash memory via STM32CubeProgrammer"
+        },
+        {
+            "label": "Reset MCU (ST-Link)",
+            "type": "shell",
+            "command": "STM32_Programmer_CLI.exe",
+            "args": [
+                "-c", "port=SWD",
+                "-rst"
+            ],
+            "options": {
+                "cwd": "${workspaceFolder}"
+            },
+            "problemMatcher": [],
+            "detail": "Reset the STM32 microcontroller via STM32CubeProgrammer"
+        }
+    ]
+}

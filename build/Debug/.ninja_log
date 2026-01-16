@@ -1,12 +1,12 @@
 # ninja log v5
-233	419	7891006484143056	sensores_banco_g4_v0.elf	ba49558d38caeebd
-3	232	7891006482445561	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj	9fe2fe5feef7bc05
+255	435	7903034204170290	sensores_banco_g4_v0.elf	aa4a0e22d4be51a2
+23	255	7903034202559562	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj	9fe2fe5feef7bc05
 23	296	7890986022806978	CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj	4227a8fd398bcb9c
 42	1079	7890986031057065	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj	e5ec594e8802634b
 13	467	7890986024922843	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/sysmem.c.obj	2cd56405b029afce
 65	1152	7890986031742034	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj	afeb757d3630d3da
-10	960	7890986029736412	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj	f6eed4258c936099
-6	846	7890986028702204	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj	10b47cd720baf14d
+72	1095	7903006068588265	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj	f6eed4258c936099
+68	1120	7903006068829281	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj	10b47cd720baf14d
 114	1106	7890986031077288	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj	529cbb5638064e21
 29	952	7890986029863843	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj	f8cb15a2e180cd06
 952	1731	7890986037742130	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj	78ac71f55f49f059
@@ -21,9 +21,17 @@
 1062	2012	7890986040592383	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj	421c57ec5c53b5a4
 35	1138	7890986031717455	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj	a96b8af580795f02
 18	802	7890986028052823	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj	a3f7b2d9de9c4128
+64	1102	7903006068680710	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj	c3da61c0ade7eb60
 467	1334	7890986033761058	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj	f28a2b6701d03b8a
 935	1599	7890986036412413	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj	983db78b3ec31bf1
 960	1633	7890986036790114	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj	8e49ba2df113211f
 804	1646	7890986036936727	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj	9c3f12001bb0e74f
 1068	1840	7890986038867844	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj	80f42db9ca05ac77
 847	1832	7890986038796370	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj	cef0ca6f7211b5b8
+53	1112	7903006068768491	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/fdcan.c.obj	b77656103f9040fc
+60	1106	7903006068705939	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj	810083bdac79f0e2
+50	1111	7903006068751006	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj	bc2658249d6e8e26
+56	1125	7903006068911723	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/i2c.c.obj	8aadf33e26b395bf
+25	242	7903033005199194	CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj	4ed0475d6c9ec919
+18	238	7903036010321120	CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj	4ed0475d6c9ec919
+239	428	7903036011988868	sensores_banco_g4_v0.elf	aa4a0e22d4be51a2

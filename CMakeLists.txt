@@ -43,8 +43,10 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # Add sources to executable
+# Proof-of-concept application entry point placed in root-level poc/ folder
+# This file provides the main() function for the firmware.
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    # Add user sources here
+    poc/app.c
 )
 
 # Add include paths

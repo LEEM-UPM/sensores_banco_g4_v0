@@ -1,1 +1,5 @@
-/.vscode
+/build
+/Drivers/CMSIS/DSP
+/Drivers/CMSIS/NN
+/Drivers/CMSIS/RTOS/Template
+/Drivers/CMSIS/RTOS2
