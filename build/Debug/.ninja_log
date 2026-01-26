@@ -1,5 +1,5 @@
 # ninja log v5
-255	435	7903034204170290	sensores_banco_g4_v0.elf	aa4a0e22d4be51a2
+230	391	7911696278466161	sensores_banco_g4_v0.elf	aa4a0e22d4be51a2
 23	255	7903034202559562	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj	9fe2fe5feef7bc05
 23	296	7890986022806978	CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj	4227a8fd398bcb9c
 42	1079	7890986031057065	cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj	e5ec594e8802634b
@@ -32,6 +32,6 @@
 60	1106	7903006068705939	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj	810083bdac79f0e2
 50	1111	7903006068751006	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj	bc2658249d6e8e26
 56	1125	7903006068911723	CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/i2c.c.obj	8aadf33e26b395bf
-25	242	7903033005199194	CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj	4ed0475d6c9ec919
-18	238	7903036010321120	CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj	4ed0475d6c9ec919
-239	428	7903036011988868	sensores_banco_g4_v0.elf	aa4a0e22d4be51a2
+17	229	7911696277055021	CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj	4ed0475d6c9ec919
+24	231	7911696646925992	CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj	4ed0475d6c9ec919
+231	399	7911696648432696	sensores_banco_g4_v0.elf	aa4a0e22d4be51a2
