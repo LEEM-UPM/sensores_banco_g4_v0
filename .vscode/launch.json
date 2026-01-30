@@ -1,0 +1,33 @@
+{
+    "configurations": [
+        {
+            "name": "Build Debug",
+            "type": "stlinkgdbtarget",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "preBuild": "${command:st-stm32-ide-debug-launch.build}",
+            "runEntry": "main",
+            "imagesAndSymbols": [
+            {
+                "imageFileName": "${workspaceFolder}/build/Debug/Power_MK2.elf"
+            }
+            ],
+            "verbose": false
+        },
+        {
+            "name" : "Build and Flash Debug",
+            "type" : "stlinkgdbtarget",
+            "request" : "launch",
+            "cwd" : "${workspaceFolder}",
+            "preBuild":"${command:st-stm32-ide-debug-launch.build}",
+            "preLaunchTask":"Build and Flash Debug",
+            "runEntry" : "main",
+            "imagesAndSymbols":[
+                {
+                    "imageFileName" : "${workspaceFolder}/build/Debug/Power_MK2.elf"
+                }
+            ],
+            "verbose":false
+        }
+    ]
+}

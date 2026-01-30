@@ -19,7 +19,7 @@ if(NOT CMAKE_BUILD_TYPE)
 endif()
 
 # Set the project name
-set(CMAKE_PROJECT_NAME sensores_banco_g4_v0)
+set(CMAKE_PROJECT_NAME Power_MK2)
 
 # Enable compile command to ease indexing with e.g. clangd
 set(CMAKE_EXPORT_COMPILE_COMMANDS TRUE)
@@ -43,10 +43,13 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 )
 
 # Add sources to executable
-# Proof-of-concept application entry point placed in root-level poc/ folder
-# This file provides the main() function for the firmware.
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
-    poc/app.c
+    # POC entry point (contains main())
+    # poc/BLINKER.c
+    # To switch POC, comment the line above and uncomment exactly ONE of these:
+    # poc/FDCAN_TEST.c
+     poc/MCP3561_READ.c
+    # poc/SWV.c
 )
 
 # Add include paths

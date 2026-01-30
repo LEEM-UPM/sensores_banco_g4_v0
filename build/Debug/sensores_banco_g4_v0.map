@@ -1160,6 +1160,8 @@ Discarded input sections
                 0x00000000      0x1c4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .text.HAL_GPIO_ReadPin
                 0x00000000       0x30 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .text.HAL_GPIO_TogglePin
+                0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .text.HAL_GPIO_LockPin
                 0x00000000       0x50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .text.HAL_GPIO_EXTI_IRQHandler
@@ -2397,20 +2399,14 @@ Discarded input sections
  .text          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .data          0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .bss           0x00000000        0x0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .text.HAL_SPI_Init
-                0x00000000      0x156 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.HAL_SPI_DeInit
                 0x00000000       0x50 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.HAL_SPI_MspInit
                 0x00000000       0x14 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.HAL_SPI_MspDeInit
                 0x00000000       0x14 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .text.HAL_SPI_Transmit
-                0x00000000      0x2ec cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.HAL_SPI_Receive
                 0x00000000      0x270 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .text.HAL_SPI_TransmitReceive
-                0x00000000      0x43e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.HAL_SPI_Transmit_IT
                 0x00000000      0x110 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.HAL_SPI_Receive_IT
@@ -2491,14 +2487,8 @@ Discarded input sections
                 0x00000000       0x46 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.SPI_TxISR_16BIT
                 0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .text.SPI_WaitFlagStateUntilTimeout
-                0x00000000      0x110 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .text.SPI_WaitFifoStateUntilTimeout
-                0x00000000      0x12c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.SPI_EndRxTransaction
                 0x00000000       0xb0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .text.SPI_EndRxTxTransaction
-                0x00000000       0x8c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.SPI_CloseRxTx_ISR
                 0x00000000       0x84 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.SPI_CloseRx_ISR
@@ -2509,13 +2499,6 @@ Discarded input sections
                 0x00000000       0xc0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .text.SPI_AbortTx_ISR
                 0x00000000      0x144 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_info    0x00000000     0x1677 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_abbrev  0x00000000      0x25d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_aranges
-                0x00000000      0x1d8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_rnglists
-                0x00000000      0x178 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_macro   0x00000000      0x1fa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .debug_macro   0x00000000      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .debug_macro   0x00000000      0x167 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .debug_macro   0x00000000       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
@@ -2557,12 +2540,6 @@ Discarded input sections
  .debug_macro   0x00000000      0xc0b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .debug_macro   0x00000000      0x718 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .debug_macro   0x00000000      0x34a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_line    0x00000000     0x20fa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_str     0x00000000    0xd28f1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .debug_frame   0x00000000      0x860 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
- .ARM.attributes
-                0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj
@@ -2715,8 +2692,6 @@ Discarded input sections
                 0x00000000       0x14 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .text.HAL_TIM_Base_MspDeInit
                 0x00000000       0x14 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .text.HAL_TIM_Base_Start
-                0x00000000       0xe0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .text.HAL_TIM_Base_Stop
                 0x00000000       0x4e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .text.HAL_TIM_Base_Start_IT
@@ -2735,8 +2710,6 @@ Discarded input sections
                 0x00000000       0x14 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .text.HAL_TIM_OC_MspDeInit
                 0x00000000       0x14 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .text.HAL_TIM_OC_Start
-                0x00000000      0x224 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .text.HAL_TIM_OC_Stop
                 0x00000000      0x138 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .text.HAL_TIM_OC_Start_IT
@@ -2947,15 +2920,6 @@ Discarded input sections
                 0x00000000       0x3a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .text.TIM_ETR_SetConfig
                 0x00000000       0x40 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .text.TIM_CCxChannelCmd
-                0x00000000       0x4a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_info    0x00000000     0x2c52 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_abbrev  0x00000000      0x2a7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_aranges
-                0x00000000      0x3e0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_rnglists
-                0x00000000      0x328 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_macro   0x00000000      0x1fa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .debug_macro   0x00000000      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .debug_macro   0x00000000      0x167 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .debug_macro   0x00000000       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
@@ -2997,12 +2961,6 @@ Discarded input sections
  .debug_macro   0x00000000      0xc0b cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .debug_macro   0x00000000      0x718 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .debug_macro   0x00000000      0x34a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_line    0x00000000     0x40e7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_str     0x00000000    0xd34bd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .comment       0x00000000       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .debug_frame   0x00000000     0x121c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
- .ARM.attributes
-                0x00000000       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
  .group         0x00000000        0xc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj
@@ -3286,15 +3244,6 @@ Discarded input sections
  .bss           0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .text.SystemClock_Config
                 0x00000000       0x80 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .text.Error_Handler
-                0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_info    0x00000000      0x290 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_abbrev  0x00000000      0x120 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_aranges
-                0x00000000       0x28 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_rnglists
-                0x00000000       0x1a CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_macro   0x00000000      0x237 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .debug_macro   0x00000000      0x167 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
@@ -3336,13 +3285,6 @@ Discarded input sections
  .debug_macro   0x00000000      0xc0b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .debug_macro   0x00000000      0x718 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .debug_macro   0x00000000      0x34a CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_macro   0x00000000      0x154 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_line    0x00000000      0x892 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_str     0x00000000    0xd24bf CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .comment       0x00000000       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .debug_frame   0x00000000       0x4c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
@@ -3694,23 +3636,11 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .data          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .bss           0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .bss.hspi1     0x00000000       0x64 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .bss.hspi3     0x00000000       0x64 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .text.MX_SPI1_Init
-                0x00000000       0x7c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .text.MX_SPI3_Init
                 0x00000000       0x7c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .text.HAL_SPI_MspInit
-                0x00000000       0xe8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .text.HAL_SPI_MspDeInit
                 0x00000000       0x60 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_info    0x00000000      0xb4e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_abbrev  0x00000000      0x1fc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_aranges
-                0x00000000       0x38 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_rnglists
-                0x00000000       0x26 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_macro   0x00000000      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .debug_macro   0x00000000      0x167 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
@@ -3753,12 +3683,6 @@ Discarded input sections
  .debug_macro   0x00000000      0x718 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .debug_macro   0x00000000      0x34a CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .debug_macro   0x00000000      0x154 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_line    0x00000000      0x910 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_str     0x00000000    0xd2a3f CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .comment       0x00000000       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .debug_frame   0x00000000       0x90 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
@@ -3807,7 +3731,6 @@ Discarded input sections
  .bss.htim1     0x00000000       0x4c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .bss.htim3     0x00000000       0x4c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .bss.htim4     0x00000000       0x4c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .bss.htim5     0x00000000       0x4c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .text.MX_TIM1_Init
                 0x00000000      0x128 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .text.MX_TIM3_Init
@@ -3822,13 +3745,6 @@ Discarded input sections
                 0x00000000      0x150 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .text.HAL_TIM_OC_MspDeInit
                 0x00000000       0x88 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_info    0x00000000     0x1018 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_abbrev  0x00000000      0x2b0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_aranges
-                0x00000000       0x50 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_rnglists
-                0x00000000       0x3e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_macro   0x00000000      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .debug_macro   0x00000000      0x167 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .debug_macro   0x00000000       0x2e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
@@ -3871,12 +3787,6 @@ Discarded input sections
  .debug_macro   0x00000000      0x718 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .debug_macro   0x00000000      0x34a CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .debug_macro   0x00000000      0x154 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_line    0x00000000      0xaf7 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_str     0x00000000    0xd2db1 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .comment       0x00000000       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .debug_frame   0x00000000      0x114 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
- .ARM.attributes
-                0x00000000       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
  .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
@@ -4162,6 +4072,8 @@ Discarded input sections
  .text          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .data          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .bss           0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+ .text.ITM_SendChar
+                0x00000000       0x50 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .bss.__env     0x00000000        0x4 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .data.environ  0x00000000        0x4 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .text.initialise_monitor_handles
@@ -4183,13 +4095,13 @@ Discarded input sections
  .text._link    0x00000000       0x20 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .text._fork    0x00000000       0x16 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .text._execve  0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
- .debug_info    0x00000000      0x6b4 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
- .debug_abbrev  0x00000000      0x1bc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+ .debug_info    0x00000000      0x6f8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+ .debug_abbrev  0x00000000      0x1d5 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .debug_aranges
-                0x00000000       0xa8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+                0x00000000       0xb0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .debug_rnglists
-                0x00000000       0x79 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
- .debug_macro   0x00000000      0x265 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+                0x00000000       0x7f CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+ .debug_macro   0x00000000      0x277 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x00000000      0xad8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x00000000       0x6e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
@@ -4237,102 +4149,125 @@ Discarded input sections
  .debug_macro   0x00000000      0x18a CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x00000000       0x16 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .debug_macro   0x00000000       0xce CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
- .debug_line    0x00000000      0x691 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
- .debug_str     0x00000000     0x9481 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+ .debug_line    0x00000000      0x6d3 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+ .debug_str     0x00000000     0x953c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .comment       0x00000000       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
- .debug_frame   0x00000000      0x2ac CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
+ .debug_frame   0x00000000      0x2d4 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .ARM.attributes
                 0x00000000       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
  .text          0x00000000       0x14 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
  .data          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
  .bss           0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .text          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .data          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .bss           0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0xad8 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x167 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x2e CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x28 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x8e CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x51 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x103 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x6a CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x1df CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x1c CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0xfb CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000     0x1011 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x11f CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000    0x130df CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x6d CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000     0x3558 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x190 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x5c CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000     0x16d9 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x600 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x1b6 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x336 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x50b CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x18b CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x43 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x23d CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x211 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x6bd CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x45c CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x11c CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x22c CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0x61 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000       0xa5 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x122 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x3d1 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x2fe CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0xc0b CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x718 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x34a CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_macro   0x00000000      0x154 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .group         0x00000000        0xc CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .data          0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .bss           0x00000000        0x0 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .bss.adc_val   0x00000000        0x4 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_Channels
+                0x00000000       0x42 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ADC_Start_Restart
+                0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ADC_Standby
+                0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ADC_Shutdown
+                0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ADC_Full_Shutdown
+                0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ReadADCData
+                0x00000000       0x6a CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ReadADCData_24Bit
+                0x00000000       0x78 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ReadADCData_32Bit
+                0x00000000       0x70 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ReadADCData_32Bit_Scan
+                0x00000000       0x84 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .text.MCP3561_ReadADCData_IT
+                0x00000000       0x6a CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0xad8 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x167 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x2e CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x28 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x8e CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x51 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x103 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x6a CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x1df CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x1c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0xfb CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000     0x1011 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x11f CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000    0x130df CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x6d CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000     0x3558 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x190 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x5c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000     0x16d9 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x600 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x1b6 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x336 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x50b CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x18b CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x43 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x23d CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x211 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x6bd CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x45c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x11c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x22c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0x61 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000       0xa5 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x122 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x3d1 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x2fe CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0xc0b CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x718 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00000000      0x34a CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
  .text          0x00000000        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-exit.o)
  .data          0x00000000        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-exit.o)
  .bss           0x00000000        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-exit.o)
@@ -4797,7 +4732,7 @@ LOAD CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
 LOAD CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/sysmem.c.obj
 LOAD CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj
 LOAD CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
-LOAD CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
+LOAD CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
 LOAD C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libm.a
 START GROUP
 LOAD C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard\libgcc.a
@@ -4821,7 +4756,7 @@ LOAD C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 0x08000000                g_pfnVectors
                 0x080001d8                        . = ALIGN (0x4)
 
-.text           0x080001d8      0x9b4
+.text           0x080001d8     0x1c94
                 0x080001d8                        . = ALIGN (0x4)
  *(.text)
  .text          0x080001d8       0x40 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
@@ -4850,245 +4785,294 @@ LOAD C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  .text.HAL_GPIO_WritePin
                 0x08000664       0x30 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
                 0x08000664                HAL_GPIO_WritePin
- .text.HAL_GPIO_TogglePin
-                0x08000694       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
-                0x08000694                HAL_GPIO_TogglePin
  .text.HAL_PWREx_DisableUCPDDeadBattery
-                0x080006c8       0x20 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
-                0x080006c8                HAL_PWREx_DisableUCPDDeadBattery
+                0x08000694       0x20 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+                0x08000694                HAL_PWREx_DisableUCPDDeadBattery
  .text.__NVIC_SetPriorityGrouping
-                0x080006e8       0x48 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                0x080006b4       0x48 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
  .text.__NVIC_GetPriorityGrouping
-                0x08000730       0x1c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                0x080006fc       0x1c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
  .text.__NVIC_SetPriority
-                0x0800074c       0x54 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                0x08000718       0x54 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
  .text.NVIC_EncodePriority
-                0x080007a0       0x66 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- *fill*         0x08000806        0x2 
+                0x0800076c       0x66 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ *fill*         0x080007d2        0x2 
  .text.SysTick_Config
-                0x08000808       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                0x080007d4       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
  .text.HAL_NVIC_SetPriorityGrouping
-                0x0800084c       0x16 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
-                0x0800084c                HAL_NVIC_SetPriorityGrouping
+                0x08000818       0x16 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                0x08000818                HAL_NVIC_SetPriorityGrouping
  .text.HAL_NVIC_SetPriority
-                0x08000862       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
-                0x08000862                HAL_NVIC_SetPriority
+                0x0800082e       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                0x0800082e                HAL_NVIC_SetPriority
  .text.HAL_SYSTICK_Config
-                0x08000896       0x18 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
-                0x08000896                HAL_SYSTICK_Config
- *fill*         0x080008ae        0x2 
+                0x08000862       0x18 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+                0x08000862                HAL_SYSTICK_Config
+ .text.HAL_SPI_Init
+                0x0800087a      0x156 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+                0x0800087a                HAL_SPI_Init
+ .text.HAL_SPI_Transmit
+                0x080009d0      0x2ec cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+                0x080009d0                HAL_SPI_Transmit
+ .text.HAL_SPI_TransmitReceive
+                0x08000cbc      0x43e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+                0x08000cbc                HAL_SPI_TransmitReceive
+ *fill*         0x080010fa        0x2 
+ .text.SPI_WaitFlagStateUntilTimeout
+                0x080010fc      0x110 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .text.SPI_WaitFifoStateUntilTimeout
+                0x0800120c      0x12c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .text.SPI_EndRxTxTransaction
+                0x08001338       0x8c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .text.HAL_TIM_Base_Start
+                0x080013c4       0xe0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+                0x080013c4                HAL_TIM_Base_Start
+ .text.HAL_TIM_OC_Start
+                0x080014a4      0x224 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+                0x080014a4                HAL_TIM_OC_Start
+ .text.TIM_CCxChannelCmd
+                0x080016c8       0x4a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+                0x080016c8                TIM_CCxChannelCmd
+ .text.Error_Handler
+                0x08001712        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+                0x08001712                Error_Handler
+ *fill*         0x0800171e        0x2 
  .text.MX_GPIO_Init
-                0x080008b0      0x160 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
-                0x080008b0                MX_GPIO_Init
+                0x08001720      0x160 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+                0x08001720                MX_GPIO_Init
+ .text.MX_SPI1_Init
+                0x08001880       0x7c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+                0x08001880                MX_SPI1_Init
+ .text.HAL_SPI_MspInit
+                0x080018fc       0xe8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+                0x080018fc                HAL_SPI_MspInit
  .text.NMI_Handler
-                0x08000a10        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a10                NMI_Handler
+                0x080019e4        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x080019e4                NMI_Handler
  .text.HardFault_Handler
-                0x08000a18        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a18                HardFault_Handler
+                0x080019ec        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x080019ec                HardFault_Handler
  .text.MemManage_Handler
-                0x08000a20        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a20                MemManage_Handler
+                0x080019f4        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x080019f4                MemManage_Handler
  .text.BusFault_Handler
-                0x08000a28        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a28                BusFault_Handler
+                0x080019fc        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x080019fc                BusFault_Handler
  .text.UsageFault_Handler
-                0x08000a30        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a30                UsageFault_Handler
+                0x08001a04        0x8 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x08001a04                UsageFault_Handler
  .text.SVC_Handler
-                0x08000a38        0xe CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a38                SVC_Handler
+                0x08001a0c        0xe CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x08001a0c                SVC_Handler
  .text.DebugMon_Handler
-                0x08000a46        0xe CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a46                DebugMon_Handler
+                0x08001a1a        0xe CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x08001a1a                DebugMon_Handler
  .text.PendSV_Handler
-                0x08000a54        0xe CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a54                PendSV_Handler
+                0x08001a28        0xe CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x08001a28                PendSV_Handler
  .text.SysTick_Handler
-                0x08000a62        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
-                0x08000a62                SysTick_Handler
- *fill*         0x08000a6e        0x2 
+                0x08001a36        0xc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x08001a36                SysTick_Handler
+ *fill*         0x08001a42        0x2 
  .text.HAL_MspInit
-                0x08000a70       0x48 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
-                0x08000a70                HAL_MspInit
+                0x08001a44       0x48 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+                0x08001a44                HAL_MspInit
  .text.Reset_Handler
-                0x08000ab8       0x50 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
-                0x08000ab8                Reset_Handler
+                0x08001a8c       0x50 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+                0x08001a8c                Reset_Handler
  .text.Default_Handler
-                0x08000b08        0x2 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
-                0x08000b08                RTC_Alarm_IRQHandler
-                0x08000b08                EXTI2_IRQHandler
-                0x08000b08                TIM8_TRG_COM_IRQHandler
-                0x08000b08                TIM8_CC_IRQHandler
-                0x08000b08                SPI4_IRQHandler
-                0x08000b08                FDCAN3_IT0_IRQHandler
-                0x08000b08                TIM1_CC_IRQHandler
-                0x08000b08                USB_HP_IRQHandler
-                0x08000b08                CORDIC_IRQHandler
-                0x08000b08                DMA2_Channel8_IRQHandler
-                0x08000b08                EXTI3_IRQHandler
-                0x08000b08                I2C3_ER_IRQHandler
-                0x08000b08                EXTI0_IRQHandler
-                0x08000b08                I2C2_EV_IRQHandler
-                0x08000b08                FPU_IRQHandler
-                0x08000b08                FDCAN1_IT1_IRQHandler
-                0x08000b08                TIM1_UP_TIM16_IRQHandler
-                0x08000b08                ADC1_2_IRQHandler
-                0x08000b08                SPI1_IRQHandler
-                0x08000b08                TIM6_DAC_IRQHandler
-                0x08000b08                TIM8_UP_IRQHandler
-                0x08000b08                DMA2_Channel2_IRQHandler
-                0x08000b08                DMA1_Channel4_IRQHandler
-                0x08000b08                TIM20_TRG_COM_IRQHandler
-                0x08000b08                USART3_IRQHandler
-                0x08000b08                DMA1_Channel7_IRQHandler
-                0x08000b08                UART5_IRQHandler
-                0x08000b08                ADC3_IRQHandler
-                0x08000b08                TIM4_IRQHandler
-                0x08000b08                DMA2_Channel1_IRQHandler
-                0x08000b08                QUADSPI_IRQHandler
-                0x08000b08                I2C1_EV_IRQHandler
-                0x08000b08                DMA1_Channel6_IRQHandler
-                0x08000b08                UART4_IRQHandler
-                0x08000b08                DMA2_Channel4_IRQHandler
-                0x08000b08                TIM3_IRQHandler
-                0x08000b08                RCC_IRQHandler
-                0x08000b08                TIM20_UP_IRQHandler
-                0x08000b08                DMA1_Channel1_IRQHandler
-                0x08000b08                Default_Handler
-                0x08000b08                DMA2_Channel7_IRQHandler
-                0x08000b08                RTC_TAMP_LSECSS_IRQHandler
-                0x08000b08                FMAC_IRQHandler
-                0x08000b08                EXTI15_10_IRQHandler
-                0x08000b08                DMA1_Channel8_IRQHandler
-                0x08000b08                TIM7_DAC_IRQHandler
-                0x08000b08                FDCAN3_IT1_IRQHandler
-                0x08000b08                TIM5_IRQHandler
-                0x08000b08                UCPD1_IRQHandler
-                0x08000b08                I2C3_EV_IRQHandler
-                0x08000b08                EXTI9_5_IRQHandler
-                0x08000b08                RTC_WKUP_IRQHandler
-                0x08000b08                PVD_PVM_IRQHandler
-                0x08000b08                SPI2_IRQHandler
-                0x08000b08                ADC5_IRQHandler
-                0x08000b08                DMA2_Channel5_IRQHandler
-                0x08000b08                CRS_IRQHandler
-                0x08000b08                DMA1_Channel5_IRQHandler
-                0x08000b08                USB_LP_IRQHandler
-                0x08000b08                EXTI4_IRQHandler
-                0x08000b08                RNG_IRQHandler
-                0x08000b08                TIM1_TRG_COM_TIM17_IRQHandler
-                0x08000b08                FDCAN2_IT1_IRQHandler
-                0x08000b08                DMA1_Channel3_IRQHandler
-                0x08000b08                ADC4_IRQHandler
-                0x08000b08                WWDG_IRQHandler
-                0x08000b08                I2C4_EV_IRQHandler
-                0x08000b08                FDCAN2_IT0_IRQHandler
-                0x08000b08                LPUART1_IRQHandler
-                0x08000b08                DMA2_Channel6_IRQHandler
-                0x08000b08                FDCAN1_IT0_IRQHandler
-                0x08000b08                TIM2_IRQHandler
-                0x08000b08                COMP7_IRQHandler
-                0x08000b08                COMP1_2_3_IRQHandler
-                0x08000b08                EXTI1_IRQHandler
-                0x08000b08                USART2_IRQHandler
-                0x08000b08                COMP4_5_6_IRQHandler
-                0x08000b08                TIM20_BRK_IRQHandler
-                0x08000b08                I2C2_ER_IRQHandler
-                0x08000b08                DMA1_Channel2_IRQHandler
-                0x08000b08                TIM8_BRK_IRQHandler
-                0x08000b08                FLASH_IRQHandler
-                0x08000b08                TIM20_CC_IRQHandler
-                0x08000b08                USART1_IRQHandler
-                0x08000b08                SPI3_IRQHandler
-                0x08000b08                I2C1_ER_IRQHandler
-                0x08000b08                FMC_IRQHandler
-                0x08000b08                LPTIM1_IRQHandler
-                0x08000b08                DMAMUX_OVR_IRQHandler
-                0x08000b08                I2C4_ER_IRQHandler
-                0x08000b08                USBWakeUp_IRQHandler
-                0x08000b08                SAI1_IRQHandler
-                0x08000b08                DMA2_Channel3_IRQHandler
-                0x08000b08                TIM1_BRK_TIM15_IRQHandler
- .text.main     0x08000b0a       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
-                0x08000b0a                main
+                0x08001adc        0x2 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+                0x08001adc                RTC_Alarm_IRQHandler
+                0x08001adc                EXTI2_IRQHandler
+                0x08001adc                TIM8_TRG_COM_IRQHandler
+                0x08001adc                TIM8_CC_IRQHandler
+                0x08001adc                SPI4_IRQHandler
+                0x08001adc                FDCAN3_IT0_IRQHandler
+                0x08001adc                TIM1_CC_IRQHandler
+                0x08001adc                USB_HP_IRQHandler
+                0x08001adc                CORDIC_IRQHandler
+                0x08001adc                DMA2_Channel8_IRQHandler
+                0x08001adc                EXTI3_IRQHandler
+                0x08001adc                I2C3_ER_IRQHandler
+                0x08001adc                EXTI0_IRQHandler
+                0x08001adc                I2C2_EV_IRQHandler
+                0x08001adc                FPU_IRQHandler
+                0x08001adc                FDCAN1_IT1_IRQHandler
+                0x08001adc                TIM1_UP_TIM16_IRQHandler
+                0x08001adc                ADC1_2_IRQHandler
+                0x08001adc                SPI1_IRQHandler
+                0x08001adc                TIM6_DAC_IRQHandler
+                0x08001adc                TIM8_UP_IRQHandler
+                0x08001adc                DMA2_Channel2_IRQHandler
+                0x08001adc                DMA1_Channel4_IRQHandler
+                0x08001adc                TIM20_TRG_COM_IRQHandler
+                0x08001adc                USART3_IRQHandler
+                0x08001adc                DMA1_Channel7_IRQHandler
+                0x08001adc                UART5_IRQHandler
+                0x08001adc                ADC3_IRQHandler
+                0x08001adc                TIM4_IRQHandler
+                0x08001adc                DMA2_Channel1_IRQHandler
+                0x08001adc                QUADSPI_IRQHandler
+                0x08001adc                I2C1_EV_IRQHandler
+                0x08001adc                DMA1_Channel6_IRQHandler
+                0x08001adc                UART4_IRQHandler
+                0x08001adc                DMA2_Channel4_IRQHandler
+                0x08001adc                TIM3_IRQHandler
+                0x08001adc                RCC_IRQHandler
+                0x08001adc                TIM20_UP_IRQHandler
+                0x08001adc                DMA1_Channel1_IRQHandler
+                0x08001adc                Default_Handler
+                0x08001adc                DMA2_Channel7_IRQHandler
+                0x08001adc                RTC_TAMP_LSECSS_IRQHandler
+                0x08001adc                FMAC_IRQHandler
+                0x08001adc                EXTI15_10_IRQHandler
+                0x08001adc                DMA1_Channel8_IRQHandler
+                0x08001adc                TIM7_DAC_IRQHandler
+                0x08001adc                FDCAN3_IT1_IRQHandler
+                0x08001adc                TIM5_IRQHandler
+                0x08001adc                UCPD1_IRQHandler
+                0x08001adc                I2C3_EV_IRQHandler
+                0x08001adc                EXTI9_5_IRQHandler
+                0x08001adc                RTC_WKUP_IRQHandler
+                0x08001adc                PVD_PVM_IRQHandler
+                0x08001adc                SPI2_IRQHandler
+                0x08001adc                ADC5_IRQHandler
+                0x08001adc                DMA2_Channel5_IRQHandler
+                0x08001adc                CRS_IRQHandler
+                0x08001adc                DMA1_Channel5_IRQHandler
+                0x08001adc                USB_LP_IRQHandler
+                0x08001adc                EXTI4_IRQHandler
+                0x08001adc                RNG_IRQHandler
+                0x08001adc                TIM1_TRG_COM_TIM17_IRQHandler
+                0x08001adc                FDCAN2_IT1_IRQHandler
+                0x08001adc                DMA1_Channel3_IRQHandler
+                0x08001adc                ADC4_IRQHandler
+                0x08001adc                WWDG_IRQHandler
+                0x08001adc                I2C4_EV_IRQHandler
+                0x08001adc                FDCAN2_IT0_IRQHandler
+                0x08001adc                LPUART1_IRQHandler
+                0x08001adc                DMA2_Channel6_IRQHandler
+                0x08001adc                FDCAN1_IT0_IRQHandler
+                0x08001adc                TIM2_IRQHandler
+                0x08001adc                COMP7_IRQHandler
+                0x08001adc                COMP1_2_3_IRQHandler
+                0x08001adc                EXTI1_IRQHandler
+                0x08001adc                USART2_IRQHandler
+                0x08001adc                COMP4_5_6_IRQHandler
+                0x08001adc                TIM20_BRK_IRQHandler
+                0x08001adc                I2C2_ER_IRQHandler
+                0x08001adc                DMA1_Channel2_IRQHandler
+                0x08001adc                TIM8_BRK_IRQHandler
+                0x08001adc                FLASH_IRQHandler
+                0x08001adc                TIM20_CC_IRQHandler
+                0x08001adc                USART1_IRQHandler
+                0x08001adc                SPI3_IRQHandler
+                0x08001adc                I2C1_ER_IRQHandler
+                0x08001adc                FMC_IRQHandler
+                0x08001adc                LPTIM1_IRQHandler
+                0x08001adc                DMAMUX_OVR_IRQHandler
+                0x08001adc                I2C4_ER_IRQHandler
+                0x08001adc                USBWakeUp_IRQHandler
+                0x08001adc                SAI1_IRQHandler
+                0x08001adc                DMA2_Channel3_IRQHandler
+                0x08001adc                TIM1_BRK_TIM15_IRQHandler
+ *fill*         0x08001ade        0x2 
+ .text.main     0x08001ae0       0x5c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+                0x08001ae0                main
+ .text._MCP3561_write
+                0x08001b3c       0x54 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+                0x08001b3c                _MCP3561_write
+ .text._MCP3561_sread
+                0x08001b90       0x42 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+                0x08001b90                _MCP3561_sread
+ *fill*         0x08001bd2        0x2 
+ .text.MCP3561_Init
+                0x08001bd4      0x10c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+                0x08001bd4                MCP3561_Init
+ .text.MCP3561_PrintRegisters
+                0x08001ce0      0x108 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+                0x08001ce0                MCP3561_PrintRegisters
+ .text.MCP3561_Reset
+                0x08001de8       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+                0x08001de8                MCP3561_Reset
+ *fill*         0x08001e0a        0x2 
  .text.__libc_init_array
-                0x08000b2c       0x48 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
-                0x08000b2c                __libc_init_array
+                0x08001e0c       0x48 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x08001e0c                __libc_init_array
  *(.glue_7)
- .glue_7        0x08000b74        0x0 linker stubs
+ .glue_7        0x08001e54        0x0 linker stubs
  *(.glue_7t)
- .glue_7t       0x08000b74        0x0 linker stubs
+ .glue_7t       0x08001e54        0x0 linker stubs
  *(.eh_frame)
- .eh_frame      0x08000b74        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .eh_frame      0x08001e54        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.init)
- .init          0x08000b74        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08000b74                _init
- .init          0x08000b78        0x8 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+ .init          0x08001e54        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08001e54                _init
+ .init          0x08001e58        0x8 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
  *(.fini)
- .fini          0x08000b80        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
-                0x08000b80                _fini
- .fini          0x08000b84        0x8 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
-                0x08000b8c                        . = ALIGN (0x4)
-                0x08000b8c                        _etext = .
+ .fini          0x08001e60        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crti.o
+                0x08001e60                _fini
+ .fini          0x08001e64        0x8 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x08001e6c                        . = ALIGN (0x4)
+                0x08001e6c                        _etext = .
 
-.vfp11_veneer   0x08000b8c        0x0
- .vfp11_veneer  0x08000b8c        0x0 linker stubs
+.vfp11_veneer   0x08001e6c        0x0
+ .vfp11_veneer  0x08001e6c        0x0 linker stubs
 
-.v4_bx          0x08000b8c        0x0
- .v4_bx         0x08000b8c        0x0 linker stubs
+.v4_bx          0x08001e6c        0x0
+ .v4_bx         0x08001e6c        0x0 linker stubs
 
-.iplt           0x08000b8c        0x0
- .iplt          0x08000b8c        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.iplt           0x08001e6c        0x0
+ .iplt          0x08001e6c        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.rodata         0x08000b8c        0x0
-                0x08000b8c                        . = ALIGN (0x4)
+.rodata         0x08001e6c        0x0
+                0x08001e6c                        . = ALIGN (0x4)
  *(.rodata)
  *(.rodata*)
-                0x08000b8c                        . = ALIGN (0x4)
+                0x08001e6c                        . = ALIGN (0x4)
 
-.ARM.extab      0x08000b8c        0x0
-                0x08000b8c                        . = ALIGN (0x4)
+.ARM.extab      0x08001e6c        0x0
+                0x08001e6c                        . = ALIGN (0x4)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x08000b8c                        . = ALIGN (0x4)
+                0x08001e6c                        . = ALIGN (0x4)
 
-.ARM            0x08000b8c        0x0
-                0x08000b8c                        . = ALIGN (0x4)
-                0x08000b8c                        __exidx_start = .
+.ARM            0x08001e6c        0x0
+                0x08001e6c                        . = ALIGN (0x4)
+                0x08001e6c                        __exidx_start = .
  *(.ARM.exidx*)
-                0x08000b8c                        __exidx_end = .
-                0x08000b8c                        . = ALIGN (0x4)
+                0x08001e6c                        __exidx_end = .
+                0x08001e6c                        . = ALIGN (0x4)
 
-.preinit_array  0x08000b8c        0x0
-                0x08000b8c                        . = ALIGN (0x4)
-                0x08000b8c                        PROVIDE (__preinit_array_start = .)
+.preinit_array  0x08001e6c        0x0
+                0x08001e6c                        . = ALIGN (0x4)
+                0x08001e6c                        PROVIDE (__preinit_array_start = .)
  *(.preinit_array*)
-                0x08000b8c                        PROVIDE (__preinit_array_end = .)
-                0x08000b8c                        . = ALIGN (0x4)
+                0x08001e6c                        PROVIDE (__preinit_array_end = .)
+                0x08001e6c                        . = ALIGN (0x4)
 
-.init_array     0x08000b8c        0x4
-                0x08000b8c                        . = ALIGN (0x4)
-                0x08000b8c                        PROVIDE (__init_array_start = .)
+.init_array     0x08001e6c        0x4
+                0x08001e6c                        . = ALIGN (0x4)
+                0x08001e6c                        PROVIDE (__init_array_start = .)
  *(SORT_BY_NAME(.init_array.*))
  *(.init_array*)
- .init_array    0x08000b8c        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
-                0x08000b90                        PROVIDE (__init_array_end = .)
-                0x08000b90                        . = ALIGN (0x4)
+ .init_array    0x08001e6c        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+                0x08001e70                        PROVIDE (__init_array_end = .)
+                0x08001e70                        . = ALIGN (0x4)
 
-.fini_array     0x08000b90        0x4
-                0x08000b90                        . = ALIGN (0x4)
+.fini_array     0x08001e70        0x4
+                0x08001e70                        . = ALIGN (0x4)
                 [!provide]                        PROVIDE (__fini_array_start = .)
  *(SORT_BY_NAME(.fini_array.*))
  *(.fini_array*)
- .fini_array    0x08000b90        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+ .fini_array    0x08001e70        0x4 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
                 [!provide]                        PROVIDE (__fini_array_end = .)
-                0x08000b94                        . = ALIGN (0x4)
-                0x08000b94                        _sidata = LOADADDR (.data)
+                0x08001e74                        . = ALIGN (0x4)
+                0x08001e74                        _sidata = LOADADDR (.data)
 
-.rel.dyn        0x08000b94        0x0
- .rel.iplt      0x08000b94        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
+.rel.dyn        0x08001e74        0x0
+ .rel.iplt      0x08001e74        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.data           0x20000000        0xc load address 0x08000b94
+.data           0x20000000        0xc load address 0x08001e74
                 0x20000000                        . = ALIGN (0x4)
                 0x20000000                        _sdata = .
  *(.data)
@@ -5106,10 +5090,10 @@ LOAD C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
  *(.RamFunc*)
                 0x2000000c                        . = ALIGN (0x4)
 
-.igot.plt       0x2000000c        0x0 load address 0x08000ba0
+.igot.plt       0x2000000c        0x0 load address 0x08001e80
  .igot.plt      0x2000000c        0x0 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
 
-.tdata          0x2000000c        0x0 load address 0x08000ba0
+.tdata          0x2000000c        0x0 load address 0x08001e80
  *(.tdata .tdata.* .gnu.linkonce.td.*)
                 0x2000000c                        . = ALIGN (0x4)
                 0x2000000c                        _edata = .
@@ -5126,7 +5110,7 @@ LOAD C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 [!provide]                        PROVIDE (__data_source_end = __tdata_source_end)
                 [!provide]                        PROVIDE (__data_source_size = (__data_source_end - __data_source))
 
-.tbss           0x2000000c        0x0 load address 0x08000ba0
+.tbss           0x2000000c        0x0 load address 0x08001e80
                 0x2000000c                        _sbss = .
                 0x2000000c                        __bss_start__ = _sbss
  *(.tbss .tbss.*)
@@ -5143,32 +5127,39 @@ LOAD C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/
                 [!provide]                        PROVIDE (__arm32_tls_tcb_offset = MAX (0x8, __tls_align))
                 [!provide]                        PROVIDE (__arm64_tls_tcb_offset = MAX (0x10, __tls_align))
 
-.bss            0x2000000c       0x20 load address 0x08000ba0
+.bss            0x2000000c       0xd4 load address 0x08001e80
  *(.bss)
  .bss           0x2000000c       0x1c C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtbegin.o
  *(.bss*)
  .bss.uwTick    0x20000028        0x4 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
                 0x20000028                uwTick
+ .bss.hspi1     0x2000002c       0x64 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+                0x2000002c                hspi1
+ .bss.htim5     0x20000090       0x4c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+                0x20000090                htim5
+ .bss.setup_done
+                0x200000dc        0x1 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+                0x200000dc                setup_done
  *(COMMON)
-                0x2000002c                        . = ALIGN (0x4)
-                0x2000002c                        _ebss = .
-                0x2000002c                        __bss_end__ = _ebss
+                0x200000e0                        . = ALIGN (0x4)
+ *fill*         0x200000dd        0x3 
+                0x200000e0                        _ebss = .
+                0x200000e0                        __bss_end__ = _ebss
                 [!provide]                        PROVIDE (__bss_end = .)
                 [!provide]                        PROVIDE (__non_tls_bss_start = ADDR (.bss))
                 [!provide]                        PROVIDE (__bss_start = __tbss_start)
                 [!provide]                        PROVIDE (__bss_size = (__bss_end - __bss_start))
 
 ._user_heap_stack
-                0x2000002c      0x604 load address 0x08000ba0
-                0x20000030                        . = ALIGN (0x8)
- *fill*         0x2000002c        0x4 
+                0x200000e0      0x600 load address 0x08001e80
+                0x200000e0                        . = ALIGN (0x8)
                 [!provide]                        PROVIDE (end = .)
-                0x20000030                        PROVIDE (_end = .)
-                0x20000230                        . = (. + _Min_Heap_Size)
- *fill*         0x20000030      0x200 
-                0x20000630                        . = (. + _Min_Stack_Size)
- *fill*         0x20000230      0x400 
-                0x20000630                        . = ALIGN (0x8)
+                0x200000e0                        PROVIDE (_end = .)
+                0x200002e0                        . = (. + _Min_Heap_Size)
+ *fill*         0x200000e0      0x200 
+                0x200006e0                        . = (. + _Min_Stack_Size)
+ *fill*         0x200002e0      0x400 
+                0x200006e0                        . = ALIGN (0x8)
 
 /DISCARD/
  libc.a:*(*)
@@ -5194,19 +5185,29 @@ LOAD linker stubs
  .ARM.attributes
                 0x00000126       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
  .ARM.attributes
-                0x0000015a       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+                0x0000015a       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .ARM.attributes
-                0x0000018e       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0000018e       0x34 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .ARM.attributes
-                0x000001c2       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+                0x000001c2       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .ARM.attributes
-                0x000001f6       0x21 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+                0x000001f6       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
  .ARM.attributes
-                0x00000217       0x34 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
+                0x0000022a       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .ARM.attributes
-                0x0000024b       0x34 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x0000025e       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .ARM.attributes
-                0x0000027f       0x22 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
+                0x00000292       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .ARM.attributes
+                0x000002c6       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .ARM.attributes
+                0x000002fa       0x21 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+ .ARM.attributes
+                0x0000031b       0x34 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .ARM.attributes
+                0x0000034f       0x34 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .ARM.attributes
+                0x00000383       0x22 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/thumb/v7e-m+fp/hard/crtn.o
 
 .comment        0x00000000       0x43
  .comment       0x00000000       0x43 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
@@ -5215,39 +5216,54 @@ LOAD linker stubs
  .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
  .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .comment       0x00000043       0x44 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
  .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
  .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
+ .comment       0x00000043       0x44 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
  .comment       0x00000043       0x44 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_info     0x00000000     0x3ad5
+.debug_info     0x00000000     0xaad3
  .debug_info    0x00000000      0x58e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_info    0x0000058e      0xb65 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_info    0x000010f3      0x763 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .debug_info    0x00001856      0x93f cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
  .debug_info    0x00002195      0xdc9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_info    0x00002f5e      0x463 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
- .debug_info    0x000033c1      0x113 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_info    0x000034d4      0x2da CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_info    0x000037ae       0x30 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
- .debug_info    0x000037de      0x1ec CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_info    0x000039ca      0x10b C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_info    0x00002f5e     0x1677 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_info    0x000045d5     0x2c52 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_info    0x00007227      0x290 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+ .debug_info    0x000074b7      0x463 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+ .debug_info    0x0000791a      0xb4e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+ .debug_info    0x00008468     0x1018 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_info    0x00009480      0x113 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_info    0x00009593      0x2da CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_info    0x0000986d       0x30 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+ .debug_info    0x0000989d     0x112b CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_info    0x0000a9c8      0x10b C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_abbrev   0x00000000      0xf5b
+.debug_abbrev   0x00000000     0x1bd4
  .debug_abbrev  0x00000000      0x11a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_abbrev  0x0000011a      0x271 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_abbrev  0x0000038b      0x1cb cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .debug_abbrev  0x00000556      0x22c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
  .debug_abbrev  0x00000782      0x31c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_abbrev  0x00000a9e      0x152 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
- .debug_abbrev  0x00000bf0       0x73 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_abbrev  0x00000c63       0xd9 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_abbrev  0x00000d3c       0x24 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
- .debug_abbrev  0x00000d60      0x132 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_abbrev  0x00000e92       0xc9 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_abbrev  0x00000a9e      0x25d cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_abbrev  0x00000cfb      0x2a7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_abbrev  0x00000fa2      0x120 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+ .debug_abbrev  0x000010c2      0x152 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+ .debug_abbrev  0x00001214      0x1fc CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+ .debug_abbrev  0x00001410      0x2b0 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_abbrev  0x000016c0       0x73 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_abbrev  0x00001733       0xd9 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_abbrev  0x0000180c       0x24 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+ .debug_abbrev  0x00001830      0x2db CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_abbrev  0x00001b0b       0xc9 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_aranges  0x00000000      0x538
+.debug_aranges  0x00000000      0xc18
  .debug_aranges
                 0x00000000       0x28 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_aranges
@@ -5259,20 +5275,30 @@ LOAD linker stubs
  .debug_aranges
                 0x00000308      0x128 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
  .debug_aranges
-                0x00000430       0x20 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+                0x00000430      0x1d8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .debug_aranges
-                0x00000450       0x60 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x00000608      0x3e0 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .debug_aranges
-                0x000004b0       0x20 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+                0x000009e8       0x28 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .debug_aranges
-                0x000004d0       0x28 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+                0x00000a10       0x20 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
  .debug_aranges
-                0x000004f8       0x20 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
+                0x00000a30       0x38 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .debug_aranges
-                0x00000518       0x20 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x00000a68       0x50 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_aranges
+                0x00000ab8       0x60 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_aranges
+                0x00000b18       0x20 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_aranges
+                0x00000b38       0x28 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+ .debug_aranges
+                0x00000b60       0x98 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_aranges
+                0x00000bf8       0x20 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_rnglists
-                0x00000000      0x3be
+                0x00000000      0x939
  .debug_rnglists
                 0x00000000       0x1a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_rnglists
@@ -5284,19 +5310,29 @@ LOAD linker stubs
  .debug_rnglists
                 0x0000023b       0xda cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
  .debug_rnglists
-                0x00000315       0x14 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+                0x00000315      0x178 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
  .debug_rnglists
-                0x00000329       0x43 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+                0x0000048d      0x328 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
  .debug_rnglists
-                0x0000036c       0x13 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+                0x000007b5       0x1a CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
  .debug_rnglists
-                0x0000037f       0x19 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+                0x000007cf       0x14 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
  .debug_rnglists
-                0x00000398       0x13 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
+                0x000007e3       0x26 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
  .debug_rnglists
-                0x000003ab       0x13 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+                0x00000809       0x3e CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_rnglists
+                0x00000847       0x43 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_rnglists
+                0x0000088a       0x13 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_rnglists
+                0x0000089d       0x19 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+ .debug_rnglists
+                0x000008b6       0x70 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_rnglists
+                0x00000926       0x13 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_macro    0x00000000    0x1f8eb
+.debug_macro    0x00000000    0x20bc2
  .debug_macro   0x00000000      0x1f2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_macro   0x000001f2      0xad8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_macro   0x00000cca       0x2e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
@@ -5343,49 +5379,74 @@ LOAD linker stubs
  .debug_macro   0x0001eabe      0x1f9 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .debug_macro   0x0001ecb7      0x21c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
  .debug_macro   0x0001eed3      0x1f2 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_macro   0x0001f0c5      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
- .debug_macro   0x0001f2d0      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_macro   0x0001f4db      0x201 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_macro   0x0001f6dc      0x20f CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
+ .debug_macro   0x0001f0c5      0x1fa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_macro   0x0001f2bf      0x1fa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_macro   0x0001f4b9      0x237 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001f6f0      0x154 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+ .debug_macro   0x0001f844      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+ .debug_macro   0x0001fa4f      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+ .debug_macro   0x0001fc5a      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_macro   0x0001fe65      0x20b CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_macro   0x00020070      0x201 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_macro   0x00020271      0x23c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x000204ad      0x15a CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00020607      0x55f CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00020b66       0x3a CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_macro   0x00020ba0       0x22 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
 
-.debug_line     0x00000000     0x5f82
+.debug_line     0x00000000     0xe16a
  .debug_line    0x00000000      0x880 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_line    0x00000880      0xc4c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_line    0x000014cc      0xc25 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .debug_line    0x000020f1      0xdab cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
  .debug_line    0x00002e9c      0xdb1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_line    0x00003c4d      0x866 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
- .debug_line    0x000044b3      0x8c2 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_line    0x00004d75      0x814 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_line    0x00005589       0x7b CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
- .debug_line    0x00005604      0x80e CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_line    0x00005e12      0x170 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_line    0x00003c4d     0x20fa cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_line    0x00005d47     0x40e7 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_line    0x00009e2e      0x892 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+ .debug_line    0x0000a6c0      0x866 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+ .debug_line    0x0000af26      0x910 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+ .debug_line    0x0000b836      0xaf7 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_line    0x0000c32d      0x8c2 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_line    0x0000cbef      0x814 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_line    0x0000d403       0x7b CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+ .debug_line    0x0000d47e      0xb7c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_line    0x0000dffa      0x170 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_str      0x00000000    0xd3e4e
- .debug_str     0x00000000    0xd3e4e cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
+.debug_str      0x00000000    0xd92d1
+ .debug_str     0x00000000    0xd92d1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
                               0xd1fbf (size before relaxing)
- .debug_str     0x000d3e4e    0xd2c48 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
- .debug_str     0x000d3e4e    0xd214a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
- .debug_str     0x000d3e4e    0xd24ad cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
- .debug_str     0x000d3e4e    0xd2904 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_str     0x000d3e4e    0xd24f7 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
- .debug_str     0x000d3e4e    0xd235c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_str     0x000d3e4e    0xd244d CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_str     0x000d3e4e       0xc6 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
- .debug_str     0x000d3e4e    0xd2389 CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_str     0x000d3e4e      0x272 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_str     0x000d92d1    0xd2c48 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
+ .debug_str     0x000d92d1    0xd214a cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
+ .debug_str     0x000d92d1    0xd24ad cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
+ .debug_str     0x000d92d1    0xd2904 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
+ .debug_str     0x000d92d1    0xd28f1 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_str     0x000d92d1    0xd34bd cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_str     0x000d92d1    0xd24bf CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+ .debug_str     0x000d92d1    0xd24f7 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+ .debug_str     0x000d92d1    0xd2a3f CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+ .debug_str     0x000d92d1    0xd2db1 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_str     0x000d92d1    0xd235c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_str     0x000d92d1    0xd244d CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_str     0x000d92d1       0xc6 CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj
+ .debug_str     0x000d92d1    0xd5f06 CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_str     0x000d92d1      0x272 C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
-.debug_frame    0x00000000     0x124c
+.debug_frame    0x00000000     0x30d8
  .debug_frame   0x00000000       0x58 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj
  .debug_frame   0x00000058      0x500 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj
  .debug_frame   0x00000558      0x14c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj
  .debug_frame   0x000006a4      0x4fc cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj
  .debug_frame   0x00000ba0      0x4e8 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj
- .debug_frame   0x00001088       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
- .debug_frame   0x000010bc      0x104 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
- .debug_frame   0x000011c0       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
- .debug_frame   0x000011f4       0x2c CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj
- .debug_frame   0x00001220       0x2c C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
+ .debug_frame   0x00001088      0x860 cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj
+ .debug_frame   0x000018e8     0x121c cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj
+ .debug_frame   0x00002b04       0x4c CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj
+ .debug_frame   0x00002b50       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj
+ .debug_frame   0x00002b84       0x90 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj
+ .debug_frame   0x00002c14      0x114 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj
+ .debug_frame   0x00002d28      0x104 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj
+ .debug_frame   0x00002e2c       0x34 CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj
+ .debug_frame   0x00002e60      0x24c CMakeFiles/sensores_banco_g4_v0.dir/poc/MCP3561_READ.c.obj
+ .debug_frame   0x000030ac       0x2c C:/ST/STM32CubeCLT_1.19.0/GNU-tools-for-STM32/bin/../lib/gcc/arm-none-eabi/13.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m+fp/hard\libg_nano.a(libc_a-init.o)
 
 .debug_line_str
                 0x00000000       0xaa

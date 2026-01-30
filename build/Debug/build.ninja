@@ -11,7 +11,7 @@
 # =============================================================================
 
 # =============================================================================
-# Project: sensores_banco_g4_v0
+# Project: Power_MK2
 # Configurations: Debug
 # =============================================================================
 
@@ -41,127 +41,127 @@ include CMakeFiles/rules.ninja
 
 cmake_ninja_workdir = C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/build/Debug/
 # =============================================================================
-# Object build statements for EXECUTABLE target sensores_banco_g4_v0
+# Object build statements for EXECUTABLE target Power_MK2
 
 
 #############################################
-# Order-only phony target for sensores_banco_g4_v0
+# Order-only phony target for Power_MK2
 
-build cmake_object_order_depends_target_sensores_banco_g4_v0: phony || cmake_object_order_depends_target_STM32_Drivers
+build cmake_object_order_depends_target_Power_MK2: phony || cmake_object_order_depends_target_STM32_Drivers
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/main.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/main.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/main.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\main.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\main.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/gpio.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/gpio.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/gpio.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\gpio.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\gpio.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/fdcan.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/fdcan.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/fdcan.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/fdcan.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\fdcan.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\fdcan.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/i2c.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/i2c.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/i2c.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/i2c.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\i2c.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\i2c.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/spi.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/spi.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/spi.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\spi.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\spi.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/tim.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/tim.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/tim.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\tim.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\tim.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/stm32g4xx_it.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/stm32g4xx_it.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/stm32g4xx_it.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\stm32g4xx_it.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\stm32g4xx_it.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/stm32g4xx_hal_msp.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/stm32g4xx_hal_msp.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/stm32g4xx_hal_msp.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\stm32g4xx_hal_msp.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\stm32g4xx_hal_msp.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/sysmem.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/sysmem.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/sysmem.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/sysmem.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\sysmem.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\sysmem.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/syscalls.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/Core/Src/syscalls.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/Core/Src/syscalls.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src\syscalls.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\Core\Src\syscalls.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\Core\Src
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\Core\Src
 
-build CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj: ASM_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/startup_stm32g473xx.s || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/startup_stm32g473xx.s.obj: ASM_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/startup_stm32g473xx.s || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\startup_stm32g473xx.s.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\startup_stm32g473xx.s.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -x assembler-with-cpp -MMD -MP -g
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir
 
-build CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj: C_COMPILER__sensores_banco_g4_v0_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/poc/app.c || cmake_object_order_depends_target_sensores_banco_g4_v0
+build CMakeFiles/Power_MK2.dir/poc/MCP3561_READ.c.obj: C_COMPILER__Power_MK2_unscanned_Debug C$:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/poc/MCP3561_READ.c || cmake_object_order_depends_target_Power_MK2
   DEFINES = -DDEBUG -DSTM32G473xx -DUSE_HAL_DRIVER
-  DEP_FILE = CMakeFiles\sensores_banco_g4_v0.dir\poc\app.c.obj.d
+  DEP_FILE = CMakeFiles\Power_MK2.dir\poc\MCP3561_READ.c.obj.d
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3 -std=gnu11
   INCLUDES = -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Core/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/STM32G4xx_HAL_Driver/Inc/Legacy -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Device/ST/STM32G4xx/Include -IC:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/cmake/stm32cubemx/../../Drivers/CMSIS/Include
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
-  OBJECT_FILE_DIR = CMakeFiles\sensores_banco_g4_v0.dir\poc
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
+  OBJECT_FILE_DIR = CMakeFiles\Power_MK2.dir\poc
 
 
 # =============================================================================
-# Link build statements for EXECUTABLE target sensores_banco_g4_v0
+# Link build statements for EXECUTABLE target Power_MK2
 
 
 #############################################
-# Link the executable sensores_banco_g4_v0.elf
+# Link the executable Power_MK2.elf
 
-build sensores_banco_g4_v0.elf: C_EXECUTABLE_LINKER__sensores_banco_g4_v0_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/main.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/gpio.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/fdcan.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/i2c.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/spi.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/tim.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/sysmem.c.obj CMakeFiles/sensores_banco_g4_v0.dir/Core/Src/syscalls.c.obj CMakeFiles/sensores_banco_g4_v0.dir/startup_stm32g473xx.s.obj CMakeFiles/sensores_banco_g4_v0.dir/poc/app.c.obj || cmake/stm32cubemx/STM32_Drivers
+build Power_MK2.elf: C_EXECUTABLE_LINKER__Power_MK2_Debug cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Core/Src/system_stm32g4xx.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_fdcan.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_rcc_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_flash_ramfunc.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_gpio.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_exti.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_dma_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_pwr_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_cortex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_i2c_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_spi_ex.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim.c.obj cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir/__/__/Drivers/STM32G4xx_HAL_Driver/Src/stm32g4xx_hal_tim_ex.c.obj CMakeFiles/Power_MK2.dir/Core/Src/main.c.obj CMakeFiles/Power_MK2.dir/Core/Src/gpio.c.obj CMakeFiles/Power_MK2.dir/Core/Src/fdcan.c.obj CMakeFiles/Power_MK2.dir/Core/Src/i2c.c.obj CMakeFiles/Power_MK2.dir/Core/Src/spi.c.obj CMakeFiles/Power_MK2.dir/Core/Src/tim.c.obj CMakeFiles/Power_MK2.dir/Core/Src/stm32g4xx_it.c.obj CMakeFiles/Power_MK2.dir/Core/Src/stm32g4xx_hal_msp.c.obj CMakeFiles/Power_MK2.dir/Core/Src/sysmem.c.obj CMakeFiles/Power_MK2.dir/Core/Src/syscalls.c.obj CMakeFiles/Power_MK2.dir/startup_stm32g473xx.s.obj CMakeFiles/Power_MK2.dir/poc/MCP3561_READ.c.obj || cmake/stm32cubemx/STM32_Drivers
   FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -Wall -fdata-sections -ffunction-sections -O0 -g3
-  LINK_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "C:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/STM32G473XX_FLASH.ld" --specs=nano.specs -Wl,-Map=sensores_banco_g4_v0.map -Wl,--gc-sections -Wl,--print-memory-usage
+  LINK_FLAGS = -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard  -T "C:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/STM32G473XX_FLASH.ld" --specs=nano.specs -Wl,-Map=Power_MK2.map -Wl,--gc-sections -Wl,--print-memory-usage
   LINK_LIBRARIES = -lm
-  OBJECT_DIR = CMakeFiles\sensores_banco_g4_v0.dir
+  OBJECT_DIR = CMakeFiles\Power_MK2.dir
   POST_BUILD = cd .
   PRE_LINK = cd .
-  TARGET_FILE = sensores_banco_g4_v0.elf
-  TARGET_PDB = sensores_banco_g4_v0.elf.dbg
+  TARGET_FILE = Power_MK2.elf
+  TARGET_PDB = Power_MK2.elf.dbg
 
 
 #############################################
@@ -403,9 +403,9 @@ build cmake/stm32cubemx/rebuild_cache: phony cmake/stm32cubemx/CMakeFiles/rebuil
 # =============================================================================
 # Target aliases.
 
-build STM32_Drivers: phony cmake/stm32cubemx/STM32_Drivers
+build Power_MK2: phony Power_MK2.elf
 
-build sensores_banco_g4_v0: phony sensores_banco_g4_v0.elf
+build STM32_Drivers: phony cmake/stm32cubemx/STM32_Drivers
 
 # =============================================================================
 # Folder targets.
@@ -415,7 +415,7 @@ build sensores_banco_g4_v0: phony sensores_banco_g4_v0.elf
 #############################################
 # Folder: C:/Users/marco/OneDrive/Documentos/GitHub/caca/sensores_banco_g4_v0/build/Debug
 
-build all: phony sensores_banco_g4_v0.elf cmake/stm32cubemx/all
+build all: phony Power_MK2.elf cmake/stm32cubemx/all
 
 # =============================================================================
 
