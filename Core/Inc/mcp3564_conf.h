@@ -73,7 +73,19 @@
 #define MCP3561_USERCONF_SCAN_ENABLE // enable / disable SCAN conversion mode
 
 #ifdef MCP3561_USERCONF_SCAN_ENABLE
-#define MCP3561_USERCONF_SCAN_REG (MCP3561_SCAN_DLY_512 | MCP3561_SCAN_CH_DIFF_A | MCP3561_SCAN_CH_DIFF_B | MCP3561_SCAN_CH_DIFF_C | MCP3561_SCAN_CH_DIFF_D)
+/*
+ * Scan all 8 single-ended channels CH0..CH7.
+ * CH_ID returned by the ADC in DATA_FORMAT_32BIT_CHID_SGN will be 0..7.
+ */
+#define MCP3561_USERCONF_SCAN_REG (MCP3561_SCAN_DLY_512 | \
+                                   MCP3561_SCAN_CH0      | \
+                                   MCP3561_SCAN_CH1      | \
+                                   MCP3561_SCAN_CH2      | \
+                                   MCP3561_SCAN_CH3      | \
+                                   MCP3561_SCAN_CH4      | \
+                                   MCP3561_SCAN_CH5      | \
+                                   MCP3561_SCAN_CH6      | \
+                                   MCP3561_SCAN_CH7)
 #define MCP3561_USERCONF_TIMER_VAL (1206222)
 #endif /* MCP3561_USERCONF_SCAN_ENABLE */
 

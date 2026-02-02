@@ -33,23 +33,38 @@
  /* Exported types ------------------------------------------------------------*/
  /* Exported constants --------------------------------------------------------*/
  /* Exported functions prototypes ---------------------------------------------*/
- void MCP3561_Init (SPI_HandleTypeDef *hspi);
- void MCP3561_Reset (SPI_HandleTypeDef *hspi);
- void MCP3561_ADC_Start_Restart(SPI_HandleTypeDef *hspi);
- void MCP3561_ADC_Standby(SPI_HandleTypeDef *hspi);
- void MCP3561_ADC_Shutdown(SPI_HandleTypeDef *hspi);
- void MCP3561_ADC_Full_Shutdown(SPI_HandleTypeDef *hspi);
- void MCP3561_Channels(SPI_HandleTypeDef *hspi, uint8_t ch_p, uint8_t ch_n);
- uint32_t MCP3561_ReadADCData    (SPI_HandleTypeDef *hspi);
- int32_t MCP3561_ReadADCData_24Bit (SPI_HandleTypeDef *hspi);
- int32_t MCP3561_ReadADCData_32Bit (SPI_HandleTypeDef *hspi);
- int32_t * MCP3561_ReadADCData_32Bit_Scan (SPI_HandleTypeDef *hspi);
- void    MCP3561_PrintRegisters (SPI_HandleTypeDef *hspi);
- // uint32_t MCP3561_ReadADCData_IT (SPI_HandleTypeDef *hspi);
+ /**
+  * All API functions now take the chip-select GPIO port/pin explicitly so that
+  * the same SPI peripheral can control multiple MCP3561/2/4 devices.
+  */
+ void MCP3561_Init (SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ void MCP3561_Reset (SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ void MCP3561_ADC_Start_Restart(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ void MCP3561_ADC_Standby(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ void MCP3561_ADC_Shutdown(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ void MCP3561_ADC_Full_Shutdown(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ void MCP3561_Channels(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin,
+                        uint8_t ch_p, uint8_t ch_n);
+ uint32_t MCP3561_ReadADCData    (SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ int32_t  MCP3561_ReadADCData_24Bit (SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ int32_t  MCP3561_ReadADCData_32Bit (SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ /**
+  * Read one SCAN-mode sample.
+  * Returns the raw 32-bit code (same layout as previous implementation).
+  * Optionally returns CH_ID[3:0] and STATUS byte via pointers.
+  */
+ int32_t  MCP3561_ReadADCData_32Bit_Scan (SPI_HandleTypeDef *hspi,
+                                          GPIO_TypeDef *cs_port, uint16_t cs_pin,
+                                          uint8_t *ch_id, uint8_t *status);
+ void     MCP3561_PrintRegisters (SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+ // uint32_t MCP3561_ReadADCData_IT (SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
 
  /* Private defines -----------------------------------------------------------*/
+/* Default chip-select for a single-device setup (ADC 1). For multiple devices,
+ * pass the desired port/pin to the API functions instead of relying on this.
+ */
 #define MCP3561_CHIP_SELECT_GPIO_Pin  (CS_ADC_1_Pin)
-#define MCP3561_CHIP_SELECT_GPIO_Port (GPIOA)
+#define MCP3561_CHIP_SELECT_GPIO_Port (CS_ADC_1_GPIO_Port)
 #define MCP3561_HAL_TIMEOUT           (3)
 
 /* @note the device address is hardcoded and depends on the chip marking */
