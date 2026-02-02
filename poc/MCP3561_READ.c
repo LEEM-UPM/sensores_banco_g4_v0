@@ -9,6 +9,7 @@
 #include <stdint.h>
 // #include "swv_debug.h"
 #include "fdcan.h"
+#include "stm32g4xx_hal_fdcan.h"
 #include "stm32g4xx_hal_spi.h"
 #include "stm32g4xx_hal_tim.h"
 #include "tim.h"
@@ -35,9 +36,39 @@ int32_t  MCP3561_ReadADCData_32Bit(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_por
 int32_t  MCP3561_ReadADCData_32Bit_Scan(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port,
                                         uint16_t cs_pin, uint8_t *ch_id, uint8_t *status);
 uint32_t MCP3561_ReadADCData_IT(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
+void send_sensors_over_can(uint16_t s1, uint16_t s2, uint16_t s3, uint16_t s4){
+	FDCAN_TxHeaderTypeDef txh;
+	uint8_t data[8];
+
+	txh.Identifier = 0x123; // standard can ID
+	txh.IdType = FDCAN_STANDARD_ID;
+	txh.TxFrameType = FDCAN_DATA_FRAME;
+
+	txh.DataLength = FDCAN_DLC_BYTES_8;
+	txh.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+	txh.BitRateSwitch = FDCAN_BRS_OFF;
+	txh.FDFormat = FDCAN_CLASSIC_CAN;
+	txh.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
+	txh.MessageMarker = 0;
 
 
+	// pack big endian byte 
+	data[0] = (uint8_t)(s1 >> 8);
+    data[1] = (uint8_t)(s1 & 0xFF);
 
+    data[2] = (uint8_t)(s2 >> 8);
+    data[3] = (uint8_t)(s2 & 0xFF);
+
+    data[4] = (uint8_t)(s3 >> 8);
+    data[5] = (uint8_t)(s3 & 0xFF);
+
+    data[6] = (uint8_t)(s4 >> 8);
+    data[7] = (uint8_t)(s4 & 0xFF);
+	if(HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &txh, data) != HAL_OK){
+		Error_Handler();
+	}
+
+}
 
 // Variables externas
 extern SPI_HandleTypeDef hspi1; 
@@ -46,16 +77,51 @@ extern TIM_HandleTypeDef htim5;
 volatile uint32_t adc_val;
 volatile bool setup_done = false;
 
+uint32_t t0;
 
 int main(void){
 	// 
 	setup_done = false;
+	t0 = HAL_GetTick();
 
-  
+	
 	HAL_Init();
+	//GPIO system 
 	MX_GPIO_Init();
+	//SPI
 	MX_SPI1_Init();
 	MX_SPI3_Init();
+	// Master Clocks
+	MX_TIM1_Init();
+	MX_TIM3_Init();
+	MX_TIM4_Init();
+	MX_TIM5_Init();
+	// Protocolo FDCAN2
+
+	MX_FDCAN2_Init();
+	// configurar un filtro para FDCAN2 (aceptar todos los mensajes)
+
+	
+
+	FDCAN_FilterTypeDef filter_config2;
+	filter_config2.IdType = FDCAN_STANDARD_ID;
+	filter_config2.FilterIndex = 0;
+	filter_config2.FilterType = FDCAN_FILTER_RANGE;
+	filter_config2.FilterConfig = FDCAN_FILTER_RANGE;
+	filter_config2.FilterID1 = 0x000; // desde 0x000 a 
+	filter_config2.FilterID2 = 0x7FF; // 0x7FF (todos los IDs estandar)
+
+	if(HAL_FDCAN_ConfigFilter(&hfdcan2, &filter_config2) != HAL_OK){
+		// Error en la configuracion del filtro
+		Error_Handler();
+	}
+
+	// Iniciar FDCAN2 
+	if(HAL_FDCAN_Start(&hfdcan2) != HAL_OK){
+		// Error en el inicio de FDCAN2
+		Error_Handler();
+	}
+
 	
 
 	// MCP1 channel setup (SPI1, CS_ADC_1)
@@ -100,10 +166,15 @@ int main(void){
 
 	setup_done = true;
 	
-	int32_t adc1_channels[8] = {0};
-	int32_t adc2_channels[8] = {0};
-	int32_t adc3_channels[8] = {0};
-	int32_t adc4_channels[8] = {0};
+	// Four differential thermocouple readings per ADC:
+	//   idx 0 -> DIFF_A (CH0-CH1)
+	//   idx 1 -> DIFF_B (CH2-CH3)
+	//   idx 2 -> DIFF_C (CH4-CH5)
+	//   idx 3 -> DIFF_D (CH6-CH7)
+	int32_t adc1_tc[8] = {0,0,0,0,0,0,0,0};
+	int32_t adc2_tc[8] = {0,0,0,0,0,0,0,0};
+	int32_t adc3_tc[8] = {0,0,0,0,0,0,0,0};
+	int32_t adc4_tc[8] = {0,0,0,0,0,0,0,0};
 
 	// bitmask of which channels have been updated since last full scan
 	uint8_t adc1_seen = 0;
@@ -112,6 +183,7 @@ int main(void){
 	uint8_t adc4_seen = 0;
 
 	while(1){
+		// Iniciar comunicacion FDCAN para enviar los datos a la tarjeta RF
 		// each MCP3561 module has an internal mux to select the input channels
 		// in SCAN mode, channels are selected automatically according to SCAN config
 		if (setup_done){
@@ -122,8 +194,9 @@ int main(void){
 			// --- ADC 1 (SPI1, CS_ADC_1) ---
 			code = MCP3561_ReadADCData_32Bit_Scan(&hspi1, CS_ADC_1_GPIO_Port, CS_ADC_1_Pin,
 			                                     &ch_id, &status);
-			if (ch_id < 8) {
-				adc1_channels[ch_id] = code;
+
+			if (ch_id < 8) { 
+				adc1_tc[ch_id] = code;
 				adc1_seen |= (1u << ch_id);
 			}
 
@@ -131,7 +204,7 @@ int main(void){
 			code = MCP3561_ReadADCData_32Bit_Scan(&hspi1, CS_ADC_2_GPIO_Port, CS_ADC_2_Pin,
 			                                     &ch_id, &status);
 			if (ch_id < 8) {
-				adc2_channels[ch_id] = code;
+				adc2_tc[ch_id] = code;
 				adc2_seen |= (1u << ch_id);
 			}
 
@@ -139,7 +212,7 @@ int main(void){
 			code = MCP3561_ReadADCData_32Bit_Scan(&hspi3, CS_ADC_3_GPIO_Port, CS_ADC_3_Pin,
 			                                     &ch_id, &status);
 			if (ch_id < 8) {
-				adc3_channels[ch_id] = code;
+				adc3_tc[ch_id] = code;
 				adc3_seen |= (1u << ch_id);
 			}
 
@@ -147,28 +220,59 @@ int main(void){
 			code = MCP3561_ReadADCData_32Bit_Scan(&hspi3, CS_ADC_4_GPIO_Port, CS_ADC_4_Pin,
 			                                     &ch_id, &status);
 			if (ch_id < 8) {
-				adc4_channels[ch_id] = code;
+				adc4_tc[ch_id] = code;
 				adc4_seen |= (1u << ch_id);
 			}
 
+			
+
 			// At this point, adcX_channels[0..7] hold the latest value per channel.
-			// When the seen mask reaches 0xFF, you have a "full" snapshot for that ADC.
+			// When the seen reaches 0xFF, you have a "full" snapshot for that ADC.
 			if (adc1_seen == 0xFF) {
-				// TODO: process full snapshot for ADC1 here (adc1_channels[0..7])
-				adc1_seen = 0; // reset for next full frame
+				
+				uint16_t tp7 = (uint16_t)adc1_tc[0] - (uint16_t)adc1_tc[1];
+				uint16_t tp3 = (uint16_t)adc1_tc[2] - (uint16_t)adc1_tc[3];
+				uint16_t tp1 = (uint16_t)adc1_tc[4] - (uint16_t)adc1_tc[5];
+				uint16_t rt1 = (uint16_t)adc1_tc[6] - (uint16_t)adc1_tc[7];
+				adc1_seen = 0; // reset for next full 
+				
 			}
+
 			if (adc2_seen == 0xFF) {
 				// TODO: process full snapshot for ADC2 here
+				uint16_t tp5 = (uint16_t)adc2_tc[0] - (uint16_t)adc2_tc[1];
+				uint16_t tp4 = (uint16_t)adc2_tc[2] - (uint16_t)adc2_tc[3];
+				uint16_t tp8 = (uint16_t)adc2_tc[4] - (uint16_t)adc2_tc[5];
+				uint16_t tp9 = (uint16_t)adc2_tc[6] - (uint16_t)adc2_tc[7];
 				adc2_seen = 0;
 			}
+
 			if (adc3_seen == 0xFF) {
+				uint16_t tp6 = (uint16_t)adc3_tc[0] - (uint16_t)adc3_tc[1];
+				uint16_t tp10 = (uint16_t)adc3_tc[2] - (uint16_t)adc3_tc[3];
+				uint16_t rt2 = (uint16_t)adc3_tc[4] - (uint16_t)adc3_tc[5];
+				uint16_t tp2 = (uint16_t)adc3_tc[6] - (uint16_t)adc3_tc[7];
+
+				
 				// TODO: process full snapshot for ADC3 here
 				adc3_seen = 0;
 			}
+
 			if (adc4_seen == 0xFF) {
 				// TODO: process full snapshot for ADC4 here
+				uint16_t g2 = (uint16_t)adc4_tc[0] - (uint16_t)adc4_tc[1];
+				uint16_t g1 = (uint16_t)adc4_tc[2] - (uint16_t)adc4_tc[3];
+				uint16_t c = (uint16_t)adc4_tc[4] - (uint16_t)adc4_tc[5];
+				uint16_t g3 = (uint16_t)adc4_tc[6] - (uint16_t)adc4_tc[7];
+
 				adc4_seen = 0;
 			}
+
+			
+			
+			
+
+			
 		}
 	}
 
@@ -177,6 +281,8 @@ int main(void){
 
     return 0;
 }
+
+
 
 // MCP3561 low level functions
 

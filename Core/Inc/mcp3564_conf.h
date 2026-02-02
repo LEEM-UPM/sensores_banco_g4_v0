@@ -65,6 +65,9 @@
 
 //@note  4-channel, auto conversion in SCAN mode at fs = 110 Hz max.
 //       32 bit data format with CHannel ID
+//       In this project each MCP3564 has four differential thermocouple inputs:
+//       CH0-CH1, CH2-CH3, CH4-CH5, CH6-CH7.
+//       We therefore configure SCAN for the four differential channels DIFF_A..DIFF_D.
 #define MCP3561_USERCONF_REG0 (MCP3561_CONFIG0_VREF_SEL_EXT | MCP3561_CONFIG0_CLK_SEL_EXT | MCP3561_CONFIG0_ADC_MODE_CONV | MCP3561_CONFIG0_CS_SEL_NONE)
 #define MCP3561_USERCONF_REG1 (MCP3561_CONFIG1_OSR_4096 | MCP3561_CONFIG1_AMCLK_DIV0)
 #define MCP3561_USERCONF_REG2 (MCP3561_CONFIG2_BOOST_x1 | MCP3561_CONFIG2_GAIN_x1 | MCP3561_CONFIG2_AZ_MUX_OFF | MCP3561_CONFIG2_AZ_REF_OFF)
@@ -74,18 +77,18 @@
 
 #ifdef MCP3561_USERCONF_SCAN_ENABLE
 /*
- * Scan all 8 single-ended channels CH0..CH7.
- * CH_ID returned by the ADC in DATA_FORMAT_32BIT_CHID_SGN will be 0..7.
+ * Scan the four differential thermocouple channels:
+ *   DIFF_A: CH0-CH1  (CH_ID = 8)
+ *   DIFF_B: CH2-CH3  (CH_ID = 9)
+ *   DIFF_C: CH4-CH5  (CH_ID = 10)
+ *   DIFF_D: CH6-CH7  (CH_ID = 11)
+ * CH_ID returned by the ADC in DATA_FORMAT_32BIT_CHID_SGN will be 8..11.
  */
-#define MCP3561_USERCONF_SCAN_REG (MCP3561_SCAN_DLY_512 | \
-                                   MCP3561_SCAN_CH0      | \
-                                   MCP3561_SCAN_CH1      | \
-                                   MCP3561_SCAN_CH2      | \
-                                   MCP3561_SCAN_CH3      | \
-                                   MCP3561_SCAN_CH4      | \
-                                   MCP3561_SCAN_CH5      | \
-                                   MCP3561_SCAN_CH6      | \
-                                   MCP3561_SCAN_CH7)
+#define MCP3561_USERCONF_SCAN_REG (MCP3561_SCAN_DLY_512   | \
+                                   MCP3561_SCAN_CH_DIFF_A | \
+                                   MCP3561_SCAN_CH_DIFF_B | \
+                                   MCP3561_SCAN_CH_DIFF_C | \
+                                   MCP3561_SCAN_CH_DIFF_D)
 #define MCP3561_USERCONF_TIMER_VAL (1206222)
 #endif /* MCP3561_USERCONF_SCAN_ENABLE */
 
