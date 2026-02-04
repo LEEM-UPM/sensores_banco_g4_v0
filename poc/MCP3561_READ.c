@@ -10,6 +10,7 @@
 // #include "swv_debug.h"
 #include "fdcan.h"
 #include "stm32g4xx_hal_fdcan.h"
+#include "stm32g4xx_hal_gpio.h"
 #include "stm32g4xx_hal_spi.h"
 #include "stm32g4xx_hal_tim.h"
 #include "tim.h"
@@ -36,24 +37,30 @@ int32_t  MCP3561_ReadADCData_32Bit(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_por
 int32_t  MCP3561_ReadADCData_32Bit_Scan(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port,
                                         uint16_t cs_pin, uint8_t *ch_id, uint8_t *status);
 uint32_t MCP3561_ReadADCData_IT(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin);
-void send_sensors_over_can(uint16_t s1, uint16_t s2, uint16_t s3, uint16_t s4){
-	FDCAN_TxHeaderTypeDef txh;
-	uint8_t data[8];
 
-	txh.Identifier = 0x123; // standard can ID
-	txh.IdType = FDCAN_STANDARD_ID;
-	txh.TxFrameType = FDCAN_DATA_FRAME;
+/*
+ * Enviar 4 valores uint16 por CAN clásico (8 bytes) usando FDCAN2.
+ * El ID se pasa como parámetro para poder separar grupos de sensores.
+ */
+static void send_4_sensors_can(uint32_t can_id,
+                               uint16_t s1, uint16_t s2,
+                               uint16_t s3, uint16_t s4)
+{
+    FDCAN_TxHeaderTypeDef txh;
+    uint8_t data[8];
 
-	txh.DataLength = FDCAN_DLC_BYTES_8;
-	txh.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
-	txh.BitRateSwitch = FDCAN_BRS_OFF;
-	txh.FDFormat = FDCAN_CLASSIC_CAN;
-	txh.TxEventFifoControl = FDCAN_NO_TX_EVENTS;
-	txh.MessageMarker = 0;
+    txh.Identifier          = can_id;               // ID estándar (0x200..0x203)
+    txh.IdType              = FDCAN_STANDARD_ID;
+    txh.TxFrameType         = FDCAN_DATA_FRAME;
+    txh.DataLength          = FDCAN_DLC_BYTES_8;
+    txh.ErrorStateIndicator = FDCAN_ESI_ACTIVE;
+    txh.BitRateSwitch       = FDCAN_BRS_OFF;
+    txh.FDFormat            = FDCAN_CLASSIC_CAN;
+    txh.TxEventFifoControl  = FDCAN_NO_TX_EVENTS;
+    txh.MessageMarker       = 0;
 
-
-	// pack big endian byte 
-	data[0] = (uint8_t)(s1 >> 8);
+    // Empaquetar big-endian (byte alto primero)
+    data[0] = (uint8_t)(s1 >> 8);
     data[1] = (uint8_t)(s1 & 0xFF);
 
     data[2] = (uint8_t)(s2 >> 8);
@@ -64,11 +71,14 @@ void send_sensors_over_can(uint16_t s1, uint16_t s2, uint16_t s3, uint16_t s4){
 
     data[6] = (uint8_t)(s4 >> 8);
     data[7] = (uint8_t)(s4 & 0xFF);
-	if(HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan1, &txh, data) != HAL_OK){
-		Error_Handler();
-	}
 
+    if (HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan2, &txh, data) != HAL_OK)
+    {
+        Error_Handler();
+    }
 }
+
+static void CAN2_SendCounter(uint8_t *data);
 
 // Variables externas
 extern SPI_HandleTypeDef hspi1; 
@@ -108,8 +118,8 @@ int main(void){
 	filter_config2.FilterIndex = 0;
 	filter_config2.FilterType = FDCAN_FILTER_RANGE;
 	filter_config2.FilterConfig = FDCAN_FILTER_RANGE;
-	filter_config2.FilterID1 = 0x000; // desde 0x000 a 
-	filter_config2.FilterID2 = 0x7FF; // 0x7FF (todos los IDs estandar)
+	filter_config2.FilterID1 = 0x124; // desde 0x000 a 
+	filter_config2.FilterID2 = 0x000; // 0x7FF (todos los IDs estandar)
 
 	if(HAL_FDCAN_ConfigFilter(&hfdcan2, &filter_config2) != HAL_OK){
 		// Error en la configuracion del filtro
@@ -186,6 +196,18 @@ int main(void){
 		// Iniciar comunicacion FDCAN para enviar los datos a la tarjeta RF
 		// each MCP3561 module has an internal mux to select the input channels
 		// in SCAN mode, channels are selected automatically according to SCAN config
+
+		uint16_t tp1;
+		uint16_t tp2;
+		uint16_t tp3;
+		uint16_t tp4;
+		uint16_t tp5;
+		uint16_t tp6;
+		uint16_t tp7;
+		uint16_t tp8;
+		uint16_t tp9;
+		uint16_t tp10;
+
 		if (setup_done){
 			uint8_t ch_id;
 			uint8_t status;
@@ -229,51 +251,86 @@ int main(void){
 			// At this point, adcX_channels[0..7] hold the latest value per channel.
 			// When the seen reaches 0xFF, you have a "full" snapshot for that ADC.
 			if (adc1_seen == 0xFF) {
-				
-				uint16_t tp7 = (uint16_t)adc1_tc[0] - (uint16_t)adc1_tc[1];
-				uint16_t tp3 = (uint16_t)adc1_tc[2] - (uint16_t)adc1_tc[3];
-				uint16_t tp1 = (uint16_t)adc1_tc[4] - (uint16_t)adc1_tc[5];
+				tp7 = (uint16_t)adc1_tc[0] - (uint16_t)adc1_tc[1];
+				tp3 = (uint16_t)adc1_tc[2] - (uint16_t)adc1_tc[3];
+				tp1 = (uint16_t)adc1_tc[4] - (uint16_t)adc1_tc[5];
 				uint16_t rt1 = (uint16_t)adc1_tc[6] - (uint16_t)adc1_tc[7];
-				adc1_seen = 0; // reset for next full 
-				
+				adc1_seen = 0; // reset for next full
+
+				// ID 0x200: tp7, tp3, tp1, rt1
+				send_4_sensors_can(0x200, tp7, tp3, tp1, rt1);
+				HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 			}
 
 			if (adc2_seen == 0xFF) {
-				// TODO: process full snapshot for ADC2 here
-				uint16_t tp5 = (uint16_t)adc2_tc[0] - (uint16_t)adc2_tc[1];
-				uint16_t tp4 = (uint16_t)adc2_tc[2] - (uint16_t)adc2_tc[3];
-				uint16_t tp8 = (uint16_t)adc2_tc[4] - (uint16_t)adc2_tc[5];
-				uint16_t tp9 = (uint16_t)adc2_tc[6] - (uint16_t)adc2_tc[7];
+				tp5 = (uint16_t)adc2_tc[0] - (uint16_t)adc2_tc[1];
+				tp4 = (uint16_t)adc2_tc[2] - (uint16_t)adc2_tc[3];
+				tp8 = (uint16_t)adc2_tc[4] - (uint16_t)adc2_tc[5];
+				tp9 = (uint16_t)adc2_tc[6] - (uint16_t)adc2_tc[7];
 				adc2_seen = 0;
+
+				// ID 0x201: tp5, tp4, tp8, tp9
+				send_4_sensors_can(0x201, tp5, tp4, tp8, tp9);
+				HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 			}
 
 			if (adc3_seen == 0xFF) {
-				uint16_t tp6 = (uint16_t)adc3_tc[0] - (uint16_t)adc3_tc[1];
-				uint16_t tp10 = (uint16_t)adc3_tc[2] - (uint16_t)adc3_tc[3];
-				uint16_t rt2 = (uint16_t)adc3_tc[4] - (uint16_t)adc3_tc[5];
-				uint16_t tp2 = (uint16_t)adc3_tc[6] - (uint16_t)adc3_tc[7];
+				tp6  = (uint16_t)adc3_tc[0] - (uint16_t)adc3_tc[1];
+				tp10 = (uint16_t)adc3_tc[2] - (uint16_t)adc3_tc[3];
+				uint16_t rt2  = (uint16_t)adc3_tc[4] - (uint16_t)adc3_tc[5];
+				tp2  = (uint16_t)adc3_tc[6] - (uint16_t)adc3_tc[7];
 
-				
 				// TODO: process full snapshot for ADC3 here
 				adc3_seen = 0;
+
+				// ID 0x202: tp6, tp10, rt2, tp2
+				send_4_sensors_can(0x202, tp6, tp10, rt2, tp2);
+				HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 			}
 
 			if (adc4_seen == 0xFF) {
-				// TODO: process full snapshot for ADC4 here
 				uint16_t g2 = (uint16_t)adc4_tc[0] - (uint16_t)adc4_tc[1];
 				uint16_t g1 = (uint16_t)adc4_tc[2] - (uint16_t)adc4_tc[3];
-				uint16_t c = (uint16_t)adc4_tc[4] - (uint16_t)adc4_tc[5];
+				uint16_t c  = (uint16_t)adc4_tc[4] - (uint16_t)adc4_tc[5];
 				uint16_t g3 = (uint16_t)adc4_tc[6] - (uint16_t)adc4_tc[7];
 
 				adc4_seen = 0;
+
+				// ID 0x203: g2, g1, c, g3
+				send_4_sensors_can(0x203, g2, g1, c, g3);
+				HAL_GPIO_TogglePin(LED1_GPIO_Port, LED1_Pin);
 			}
 
-			
-			
-			
-
+			HAL_Delay(10);
 			
 		}
+
+		        // --- Recepción de sensores por CAN (FDCAN2) ---
+        while (HAL_FDCAN_GetRxFifoFillLevel(&hfdcan2, FDCAN_RX_FIFO0) > 0)
+        {
+
+			FDCAN_RxHeaderTypeDef rxh;
+            uint8_t data[8];
+
+            if (HAL_FDCAN_GetRxMessage(&hfdcan2, FDCAN_RX_FIFO0, &rxh, data) != HAL_OK)
+            {
+                break;
+            }
+
+			if(data[0] == 0x01){
+            float ps = 0.0f;
+			float fn = 0.0f;
+			uint16_t dataBuffer16[12] = {tp1, tp2, tp3, tp4, tp5, tp6, tp7, tp8, tp9, tp10, ps, fn};
+			uint8_t dataBuffer[24];
+
+			// Convertir big-endian
+			for(int i = 0; i < 4; i++) {
+				dataBuffer[i*2]   = (uint8_t)(dataBuffer16[i] >> 8);
+				dataBuffer[i*2+1] = (uint8_t)(dataBuffer16[i] & 0xFF);
+			}
+
+			CAN2_SendCounter(dataBuffer);
+			}
 	}
 
 
@@ -523,4 +580,17 @@ uint32_t MCP3561_ReadADCData_IT(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, 
 
 	uint32_t value = (val[1] << 16) | (val[2] << 8) | val[3];
 	return value;
+}
+
+static void CAN2_SendCounter(uint8_t *data)
+{
+  HAL_StatusTypeDef status;
+
+  /* Copy 8 bytes from input parameter to tx buffer */
+  for (uint8_t i = 0; i < 8; i++)
+  {
+    txData[i] = data[i];
+  }
+  
+  status = HAL_FDCAN_AddMessageToTxFifoQ(&hfdcan2, &txHeader, txData);
 }

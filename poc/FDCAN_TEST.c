@@ -117,5 +117,5 @@ static void fdcan_process_rx(void) {
 
 
 static void log_uart(const char *msg){
-    // Placeholder function (IDK Where to get UART)
+    // Placeholder function 
 }
