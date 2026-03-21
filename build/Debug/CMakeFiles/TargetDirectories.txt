@@ -1,0 +1,6 @@
+C:/Users/User/sensores_banco_g4_v0/build/Debug/CMakeFiles/Power_MK2.dir
+C:/Users/User/sensores_banco_g4_v0/build/Debug/CMakeFiles/edit_cache.dir
+C:/Users/User/sensores_banco_g4_v0/build/Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/User/sensores_banco_g4_v0/build/Debug/cmake/stm32cubemx/CMakeFiles/STM32_Drivers.dir
+C:/Users/User/sensores_banco_g4_v0/build/Debug/cmake/stm32cubemx/CMakeFiles/edit_cache.dir
+C:/Users/User/sensores_banco_g4_v0/build/Debug/cmake/stm32cubemx/CMakeFiles/rebuild_cache.dir
