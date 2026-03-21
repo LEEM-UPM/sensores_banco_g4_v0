@@ -87,8 +87,8 @@ void Error_Handler(void);
 #define MCLK_1_GPIO_Port GPIOB
 #define IRQ_1_Pin GPIO_PIN_10
 #define IRQ_1_GPIO_Port GPIOB
-#define CS_ADC_1_Pin GPIO_PIN_11
-#define CS_ADC_1_GPIO_Port GPIOB
+#define ps_no_configurado_Pin GPIO_PIN_11
+#define ps_no_configurado_GPIO_Port GPIOB
 #define INT0_ITDS_Pin GPIO_PIN_14
 #define INT0_ITDS_GPIO_Port GPIOB
 #define VSENSING5V_Pin GPIO_PIN_15
@@ -97,8 +97,8 @@ void Error_Handler(void);
 #define SDA_GPIO_Port GPIOA
 #define SCL_Pin GPIO_PIN_9
 #define SCL_GPIO_Port GPIOA
-#define CAN_2_STB_Pin GPIO_PIN_10
-#define CAN_2_STB_GPIO_Port GPIOA
+#define CS_ADC_1_Pin GPIO_PIN_10
+#define CS_ADC_1_GPIO_Port GPIOA
 #define CAN_1_STB_Pin GPIO_PIN_15
 #define CAN_1_STB_GPIO_Port GPIOA
 #define SCK_3_Pin GPIO_PIN_3

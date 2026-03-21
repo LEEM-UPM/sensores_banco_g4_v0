@@ -45,10 +45,10 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # POC entry point (contains main())
-    # poc/BLINKER.c
+      poc/BLINKER.c
     # To switch POC, comment the line above and uncomment exactly ONE of these:
     # poc/FDCAN_TEST.c
-     poc/MCP3561_READ.c
+    # poc/MCP3561_READ.c
     # poc/SWV.c
 )
 
